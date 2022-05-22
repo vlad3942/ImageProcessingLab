@@ -11,7 +11,7 @@
 
 Для получения снимка с феб камеры используйте скомпилированную библиотеку в терминале со следующей командой:
 ```bash
-java -java myLib.jar take_photo
+java -jar myLib.jar take_photo
 ```
 после её выполнения в каталоге появится файл с именем "picture_from_webcam.png", содержащий полученную с веб камеры фотографию.
 
@@ -30,7 +30,7 @@ java -java myLib.jar take_photo
 
 Для выполнения обработки выходного изображения в формате tiff следует выполнить следующую команду:
 ```bash
-java -java myLib.jar photo_process {output_file_name}
+java -jar myLib.jar photo_process {output_file_name}
 ```
 Где {output_file_name} - имя выходного изображения в фрмате tiff, полученного на предыдущем шаге.
 
