@@ -115,12 +115,11 @@ public class Bayerizator {
     }
 
     public static int getColorComponent(ColorChoose ch, Color color) {
-        switch (ch) {
-            case RED: return color.getRed();
-            case GREEN: return color.getGreen();
-            case BLUE: return color.getBlue();
-        }
-        throw new IllegalStateException("Unexpected color type");
+        return switch (ch) {
+            case RED -> color.getRed();
+            case GREEN -> color.getGreen();
+            case BLUE -> color.getBlue();
+        };
     }
 
     public static void copyEndPixels(final BufferedImage result) {
@@ -155,6 +154,7 @@ public class Bayerizator {
                 variable_number_of_gradients_tack(x, y, source, result, koef, x, y);
             }
         }
+        ends(source, result, koef);
     }
 
     private static void ends(
